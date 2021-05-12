@@ -6,20 +6,20 @@ import 'package:sample/infrastructure/auth/auth_failure_or_success.dart';
 import '../../../../domain/auth/i_auth_facade.dart';
 import '../../../../domain/core/value_validators.dart';
 
-part 'sign_in_form_event.dart';
+part 'sign_up_form_event.dart';
 
-part 'sign_in_form_state.dart';
+part 'sign_up_form_state.dart';
 
-part 'sign_in_form_bloc.freezed.dart';
+part 'sign_up_form_bloc.freezed.dart';
 
 @injectable
-class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
+class SignUpFormBloc extends Bloc<SignUpFormEvent, SignUpFormState> {
   final IAuthFacade _authFacade;
 
-  SignInFormBloc(this._authFacade) : super(SignInFormState.initial());
+  SignUpFormBloc(this._authFacade) : super(SignUpFormState.initial());
 
   @override
-  Stream<SignInFormState> mapEventToState(SignInFormEvent event) async* {
+  Stream<SignUpFormState> mapEventToState(SignUpFormEvent event) async* {
     yield* event.map(
       emailChange: (event) async* {
         yield state.copyWith(
@@ -33,7 +33,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
           authFailureOrSuccess: AuthFailureOrSuccess.none(),
         );
       },
-      signInWithEmailAndPassword: (event) async* {
+      registerWithEmailAndPassword: (event) async* {
         final String email = state.emailAddress;
         final String password = state.password;
 
@@ -44,7 +44,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
             authFailureOrSuccess: AuthFailureOrSuccess.none(),
           );
 
-          var result = await _authFacade.signInWithEmailAndPassword(
+          var result = await _authFacade.registerWithEmailAndPassword(
             emailAddress: email,
             password: password,
           );
@@ -59,14 +59,6 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
             authFailureOrSuccess: AuthFailureOrSuccess.none(),
           );
         }
-      },
-      autoLogin: (event) async* {
-        var result = await _authFacade.autoLogin();
-        yield state.copyWith(
-          autoLoginStatus: true,
-          isSubmitting: false,
-          authFailureOrSuccess: result.authFailureOrSuccess,
-        );
       },
     );
   }

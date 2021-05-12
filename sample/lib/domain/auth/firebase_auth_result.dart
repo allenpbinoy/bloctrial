@@ -1,4 +1,4 @@
-import 'auth_failure_or_success.dart';
+import 'package:sample/infrastructure/auth/auth_failure_or_success.dart';
 
 class FirebaseAuthResult {
   final bool isSuccess;

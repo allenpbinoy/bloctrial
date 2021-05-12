@@ -1,22 +1,20 @@
-part of 'sign_in_form_bloc.dart';
+part of 'sign_up_form_bloc.dart';
 
 @freezed
-class SignInFormState with _$SignInFormState {
-  const factory SignInFormState({
-    required bool autoLoginStatus,
+class SignUpFormState with _$SignUpFormState {
+  const factory SignUpFormState({
     required String emailAddress,
     required String password,
     required bool showErrorMessages,
     required bool isSubmitting,
     required AuthFailureOrSuccess authFailureOrSuccess,
-  }) = _SignInFormState;
+  }) = _SignUpFormState;
 
-  factory SignInFormState.initial() => SignInFormState(
+  factory SignUpFormState.initial() => SignUpFormState(
         emailAddress: '',
         password: '',
         showErrorMessages: false,
         isSubmitting: false,
         authFailureOrSuccess: AuthFailureOrSuccess.none(),
-        autoLoginStatus: false,
       );
 }

@@ -10,4 +10,5 @@ abstract class IAuthFacade {
     required String emailAddress,
     required String password,
   });
+  Future<FirebaseAuthResult> autoLogin();
 }
