@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "102414611984",
+    "project_id": "sample-ea8f1",
+    "storage_bucket": "sample-ea8f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102414611984:android:b6855b5b927686df57bc95",
+        "android_client_info": {
+          "package_name": "com.example.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102414611984-0fr7ega7ku8t80sk6ll1d6q7go3qcr9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP2KjL0um7veFLK1dJasKFs03iuwAkH_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102414611984-0fr7ega7ku8t80sk6ll1d6q7go3qcr9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102414611984:android:c7ee6788e66f376157bc95",
+        "android_client_info": {
+          "package_name": "com.puzzleleaf.crypto_wallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102414611984-0fr7ega7ku8t80sk6ll1d6q7go3qcr9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP2KjL0um7veFLK1dJasKFs03iuwAkH_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102414611984-0fr7ega7ku8t80sk6ll1d6q7go3qcr9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
